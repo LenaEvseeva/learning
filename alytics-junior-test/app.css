@@ -1,0 +1,18 @@
+
+.page-content{
+	counter-reset: tasks;
+}
+
+.page-content div{
+   margin: 10px;
+   padding: 5px;
+   background: #f2a286;
+   border: 2px solid #03C03C;
+   border-radius: 10px; 
+ }
+
+.page-content div:before {
+  counter-increment: tasks;
+  content: counter(tasks);
+  margin-right: 10px;
+}
