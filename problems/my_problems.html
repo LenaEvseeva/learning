@@ -1,0 +1,191 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+
+
+// №1 Решето Эратосфена (найти сумму всех простых чисел от 0 до 100 использя метод 
+// под названием Решето Эратосфена)
+
+// №1 Мое решение
+
+var arr = [];
+
+// Fill array
+for (var i = 2; i <= 100; i++) {
+    arr.push(i);
+}
+
+// Get last array element
+var n = arr[arr.length - 1];
+
+function eratosfen(p) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % p == 0 && arr[i] !== p) {
+            arr.splice(i, 1);
+            i = i - 1;
+        }
+    }
+    return arr;
+}
+
+
+function sumEratosfen() {
+    var sum = 0;
+    for (var s = 0; s < arr.length; s++) {
+        sum += arr[s];
+    }
+    return sum;
+}
+
+
+for (var i = 0; i < arr.length; i++) {
+    var p = arr[i];
+    if (Math.pow(p, 2) < n) {
+        eratosfen(p);
+    }
+}
+
+alert(sumEratosfen());
+
+
+
+// №1 Решение в учебнике
+
+// шаг 1
+var arr = [];
+
+for (var i = 2; i < 100; i++) {
+  arr[i] = true
+}
+
+// шаг 2
+var p = 2;
+
+do {
+  // шаг 3
+  for (i = 2 * p; i < 100; i += p) {
+    arr[i] = false;
+  }
+
+  // шаг 4
+  for (i = p + 1; i < 100; i++) {
+    if (arr[i]) break;
+  }
+
+  p = i;
+} while (p * p < 100); // шаг 5
+
+// шаг 6 (готово)
+// посчитать сумму
+var sum = 0;
+for (i = 0; i < arr.length; i++) {
+  if (arr[i]) {
+    sum += i;
+  }
+}
+
+alert( sum );
+
+
+// №2 Создайте калькулятор для введённых значений
+
+// №2 Мое решение 
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+var arr = [];
+var i = 0;
+var sum = 0;
+
+do {
+    var x = prompt('Enter some number','');
+    
+	if (isNumeric(x)) {
+	    arr[i] = x;
+        i++;
+        sum += Number(x);		
+    }
+}
+while (isNumeric(x));
+
+alert(sum);
+
+
+// №2 Решение в учебнике
+
+var numbers = [];
+
+while (true) {
+
+  var value = prompt("Введите число", 0);
+
+  if (value === "" || value === null || isNaN(value)) break;
+
+  numbers.push(+value);
+}
+
+var sum = 0;
+for (var i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
+}
+
+alert( sum );
+
+
+// №3 Фильтр диапазона
+
+// №3 Мое решение
+
+var arr = [];
+
+for(var j = 1; j <= 100; j++) {
+    arr.push(j);
+}
+
+var min = Number(prompt('Enter min',''));
+var max = Number(prompt('Enter max',''));
+
+function filterRange(arr, min, max) {
+
+    for(var i = 0; i < arr.length; i++) {
+    
+        if (min > arr[i] || arr[i] > max) {
+  
+            arr.splice(i,1);
+            i = i - 1;
+        }
+    }
+  return arr;
+}
+
+alert(filterRange(arr, min, max));
+
+// №3 Решение в учебнике
+
+function filterRange(arr, a, b) {
+  var result = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] >= a && arr[i] <= b) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+}
+
+var arr = [5, 4, 3, 8, 0];
+
+var filtered = filterRange(arr, 3, 5);
+alert( filtered );
+
+
+
+</script>
+</body>
+</html>
