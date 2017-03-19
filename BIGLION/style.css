@@ -1,0 +1,257 @@
+
+.basic {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+
+.content {
+	background-image: url('picture/header.png'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.content-basic {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	align-items: stretch;
+	width: 50em;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.menu-logo {
+	margin: 2.5% 3% 1%;
+}
+
+.menu-items {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 3% 0 0;
+}
+
+.menu-items div {
+	color: rgba(255, 255, 255, 0.7);
+	margin: 40px 20px 20px 0px;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1em;
+	transition: color 0.3s ease;
+	cursor: pointer;
+}
+
+.menu-items div:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.small-menu__button {
+	background: none;
+	border: none;
+	position: absolute;
+	bottom: 43.8em;
+	left: 86em;
+	cursor: pointer;
+}
+
+.small-menu__button:focus {
+	outline: none;
+}
+
+.locations {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.locations select {
+	display: block;
+	background: none;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	height: 3.5em;
+	width: 19em;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1em;
+	color: rgba(255, 255, 255, 0.7);
+	padding-left: 30px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+}
+
+.locations select:focus {
+	outline: none;
+}
+
+.locations select option {
+	color: rgba(0, 0, 0, 1);
+}
+
+.locations-img {
+	margin: 1em;
+	position: relative;
+	bottom: 2em;
+}
+
+.locations div {
+	background-image: url('picture/tick.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-position-x: 90%;
+}
+
+.locations__fields {
+	margin: 1em;
+	display: flex;
+	flex-direction: row;
+}
+
+.locations__fields label{
+	display: block;
+	border: 2px solid #fff;
+	border-radius: 30px 0 0 30px;
+	height: 3.5em;
+	width: 10em;
+	padding-right: 10px;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1em;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.locations__fields label span {
+	position: relative;
+	left: 2em;
+	top: 1.2em;
+}
+
+.locations__fields input{
+	display: block;
+	border: 2px solid #fff;
+	border-left: none;
+	border-radius: 0 30px 30px 0;
+	height: 2.5em;
+	width: 14em;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1.5em;
+	padding-left: 20px;
+	color: #5a0084;
+}
+
+.locations__fields input:focus {
+	outline: none;
+}
+
+.white {
+	background: #fff;
+}
+
+.translucent {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.locations-print {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.locations-print:focus {
+	outline: none;
+}
+
+.locations-printpicture {
+	position: relative;
+	bottom: 4.5em;
+	left: 10em;
+}
+
+.locations__fields__input {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	left: 11.5em;
+	top: 13.4em;
+	width: 4.5em;
+}
+
+.locations__fields__input input {
+	height: 1em;
+	width: 1em;
+	border: none;
+	background: #fff;
+	border-radius: 20px;
+	padding: 0;
+	margin: 0;
+	font-size: 2em;
+	line-height: 0;
+	cursor: pointer;
+}
+
+.locations__fields__input input:focus {
+	outline: none;
+}
+
+.sidebar {
+	width: 25%;
+	background: #5a0084;
+}
+
+.hidden {
+	display: none;
+}
+
+.sidebar__menu1 {
+	margin: 1em 1.5em;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 4em;
+	padding-left: 1em;
+}
+
+.sidebar__menu1 img {
+	margin: 0 0 0em 2em;
+	vertical-align: middle;
+}
+
+.sidebar__menu2 {
+	margin: 2em;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #ffec00;
+}
+
+.sidebar__menu2 img {
+	vertical-align: middle;
+}
+
+.sidebar__menu {
+	margin: 2em;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #b6aadc;
+}
+
+.sidebar__menu img {
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
