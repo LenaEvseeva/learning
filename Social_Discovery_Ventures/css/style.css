@@ -1,0 +1,83 @@
+
+.tabs{
+	display: flex;
+	background: #eee;
+	height: 200px;
+	width: 600px;
+	margin: 200px;
+	position: relative;
+}
+
+.tabs_style{
+	position: absolute;
+	height: 150px;
+	width: 600px;
+	background: yellow;
+	margin-top: 20px;
+	display: none;
+}
+
+.color{
+	display: none;
+}
+
+.black{
+	display: inline-block;
+}
+
+label{
+	display: block;
+}
+
+label span{
+	color: blue;
+	font-size: 1.23em;
+	display: inline-block;
+	vertical-align: top;
+}
+
+input:checked + label span {
+    color: #000;
+	   }
+	   
+input:checked + label .color {
+    display: inline-block;
+	   }
+	   
+input:checked + label .black {
+    display: none;
+	   }
+	   
+input:checked + label + div  {
+    display: block;
+	   }
+	   
+input:checked + label   {
+    background: white;
+	   }
+	
+label{
+	background: green;
+	display: inline-block;
+}	
+	
+.tabs input{
+	display: none;
+}	
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
