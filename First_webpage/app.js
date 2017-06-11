@@ -2,7 +2,6 @@
 function addSidebar() {
 	this.classList.add("hidden");
 	this.nextElementSibling.classList.remove("hidden");
-	document.querySelector('.small-menu__button').style.left = "75em";
 	document.querySelector('.sidebar').classList.remove("hidden");
 }
 
@@ -10,7 +9,6 @@ function removeSidebar() {
 	this.classList.add("hidden");
 	this.previousElementSibling.classList.remove("hidden");
 	document.querySelector('.sidebar').classList.add("hidden");
-	document.querySelector('.small-menu__button').style.left = "86em";
 }
 
 function checkboxOff() {
@@ -54,13 +52,3 @@ document.querySelector('.img4').addEventListener('click', checkboxOn);
 document.querySelector('.img4').addEventListener('click', checkboxOn);
 document.getElementById('minus').addEventListener('click', minusone);
 document.getElementById('plus').addEventListener('click', plusone);
-
-
-
-
-
-
-
-
-
-

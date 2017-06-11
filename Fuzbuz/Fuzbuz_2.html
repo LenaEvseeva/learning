@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div style="padding: 20px 0 0 20px; font-size: 18px; line-height: 24px;">
+			Реализовать функцию checkSyntax(string), проверяющую на синтаксическую<br>
+			верность последовательность скобок.<br>
+			Задача не сводится к простой проверке сбалансированности скобок. <br>
+			Нужно еще учитывать их последовательность (вложенность).<br><br>
+			В случае ошибки возвращаем 1.<br>
+      В остальных случаех возвращаем 0.<br><br>
+
+			Тесты:<br><br>
+
+			checkSyntax("---(++++)----") == 0<br><br>
+			checkSyntax("") -> 0<br><br>
+			checkSyntax("before ( middle []) after ") == 0<br><br>
+			checkSyntax(") (") == 1<br><br>
+			checkSyntax("} {") == 1<br><br>
+			checkSyntax("<(   >)") == 1<br><br>
+			checkSyntax("(  [  <>  ()  ]  <>  )") == 0<br><br>
+			checkSyntax("   (      [)") == 1<br><br>
+
+		</div>
+		<script>
+			var string = prompt('Enter some string','');
+			var arr = string.split('');
+			var arrPiece = [];
+			var result;
+
+			for(var i = 0; i < arr.length; i++) {
+				switch(arr[i]) {
+					case '(' : arrPiece.push(1);
+					break;
+					case ')' : arrPiece.push(2);
+					break;
+					case '{' : arrPiece.push(4);
+					break;
+					case '}' : arrPiece.push(5);
+					break;
+					case '<' : arrPiece.push(7);
+					break;
+					case '>' : arrPiece.push(8);
+					break;
+					case '[' : arrPiece.push(10);
+					break;
+					case ']' : arrPiece.push(11);
+					break;
+				}
+			}
+
+			function checkSyntax(arrPiece) {
+
+				if(arrPiece.length == 0) {
+					return result = 0 ;
+				}
+
+				for(var i = 0; i < arrPiece.length; i++) {
+					if(arrPiece[i] == arrPiece[i + 1] - 1) {
+						arrPiece.splice(i,2);
+						checkSyntax(arrPiece);
+						return result;
+					}
+				}
+
+				if(result !== 0) {
+				   return result = 1;
+				}
+			}
+
+			alert(checkSyntax(arrPiece));
+		</script>
+	</body>
+</html>

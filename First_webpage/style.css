@@ -7,11 +7,12 @@
 
 
 .content {
-	background-image: url('picture/header.png'); 
+	background-image: url('picture/header.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	width: 100%;
+	position: relative;
 }
 
 .content-basic {
@@ -56,10 +57,10 @@
 .small-menu__button {
 	background: none;
 	border: none;
-	position: absolute;
-	bottom: 43.8em;
-	left: 86em;
+	top: 20px;
+	left: 90%;
 	cursor: pointer;
+	position: absolute;
 }
 
 .small-menu__button:focus {
@@ -247,11 +248,3 @@
 .sidebar__menu img {
 	vertical-align: middle;
 }
-
-
-
-
-
-
-
-
