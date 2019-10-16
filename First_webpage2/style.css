@@ -1,0 +1,18 @@
+.page {
+	display: flex;
+	align-items: stretch;
+}
+
+.page-basic{
+	background: red;
+	flex-grow: 1;
+	flex-basis: 100px;
+	min-width: 50px;
+	min-height: 80px;
+}
+
+.page-sidebar{
+	background: yellow;
+	min-width: 50px;
+	min-height: 80px;
+}
